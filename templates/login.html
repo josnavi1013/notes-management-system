@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Login - EMS{% endblock %}
+
+
+
+{% block content %}
+<div class="login-container container">
+    <div class="login-card">
+        <h3 class="text-center mb-2">Admin Login</h3>
+
+        
+        <form action="{{ url_for('login') }}" method="post">
+            <div class="mb-3">
+                
+                <input type="text" class="form-control" name="username" placeholder="Enter username" required>
+            </div>
+            <div class="mb-3">
+                
+                <input type="password" class="form-control" name="password" placeholder="Enter password" required>
+            </div>
+            <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-primary shadow-sm">Sign In</button>
+            </div>
+        </form>
+
+        <div class="text-center">
+            <a href="{{ url_for('forgot_password') }}" class="text-decoration-none small">Forgot Password?</a>
+        </div>
+        
+        <hr class="my-3">
+        
+        <p class="text-center small mb-0">
+            New here? <a href="{{ url_for('Reg') }}" class="text-decoration-none fw-bold">Register</a>
+        </p>
+    </div>
+</div>
+{% endblock %}

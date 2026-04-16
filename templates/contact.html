@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - NMS{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6 col-lg-5">
+        <div class="card custom-card p-4">
+            <h2 class="text-center mb-3 fw-bold">Contact Us</h2>
+            <form action="/contact" method="POST">
+                <div class="mb-3">
+                    <input type="text" name="name" class="form-control" placeholder="Enter username" required>
+                </div>
+                
+                <div class="mb-3">
+                    <input type="email" name="email" class="form-control" placeholder="Enter email" required>
+                </div>
+
+                <div class="mb-3">
+                    <select name="subject" class="form-select">
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Technical Support">Technical Support</option>
+                        <option value="Feature Request">Feature Request</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <textarea name="message" class="form-control" rows="4" placeholder="Enter your message" required></textarea>
+                </div>
+
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary shadow-sm py-2 fw-bold">Send Message</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "base1.html" %}
+
+{% block title %}Add New Note - NMS{% endblock %}
+
+{% block content %}
+<div class="container d-flex justify-content-center">
+    <div class="card shadow-sm border-0 rounded-4" style="width: 100%; max-width: 600px;">
+        <div class="card-body p-5">
+            <div class="text-center mb-4">
+                <h2 class="fw-bold">Create New Note</h2>
+                <p class="text-muted small">Capture your thoughts and stay organized</p>
+            </div>
+
+            
+
+            <form action="/add_note" method="POST">
+                <div class="mb-3">
+                    <label class="form-label fw-bold small text-secondary">Note Title</label>
+                    <input type="text" name="title" class="form-control rounded-pill px-3" 
+                           placeholder="e.g., Project Ideas" required>
+                </div>
+
+
+                <div class="mb-4">
+                    <label class="form-label fw-bold small text-secondary">Content</label>
+                    <textarea name="content" class="form-control rounded-4 px-3" rows="5" 
+                              placeholder="Write your note here..." required></textarea>
+                </div>
+
+                <div class="d-grid gap-2">
+                    <button type="submit" class="btn btn-primary rounded-pill fw-bold py-2 shadow-sm">
+                        Save Note
+                    </button>
+                    <a href="/notes" class="btn btn-light rounded-pill py-2">
+                        Cancel
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

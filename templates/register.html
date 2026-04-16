@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block title%}login{%endblock%}
+
+{%block content%}
+
+<div class="registration-container container">
+        <div class="registration-card">
+            <h3 class="text-center mb-3 fw-bold">Create Admin Account</h3>
+
+
+            <form action="/register" method="post">
+                <div class="mb-3">
+                    
+                    <input type="text" class="form-control" name="uname" placeholder="Enter username" required>
+                </div>
+                
+                <div class="mb-3">
+                    
+                    <input type="email" class="form-control" name="email" placeholder="Enter email" required>
+                </div>
+
+                <div class="mb-3">
+                    
+                    <input type="password" class="form-control" name="pwrd" placeholder="Enter password" required>
+                </div>
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-lg shadow-sm">Register</button>
+                </div>
+            </form>
+
+            <hr class="my-4">
+            
+            <p class="text-center small text-secondary">
+                Already have an account? <a href="/" class="text-decoration-none fw-bold">Login here</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}
