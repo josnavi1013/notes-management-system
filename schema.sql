@@ -9,7 +9,7 @@ create table notes(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     title  TEXT NOT NULL,
     content TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTANMP,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     user_id INTEGER,
     FOREIGN KEY (user_id) REFERENCES user(user_id)
 );
